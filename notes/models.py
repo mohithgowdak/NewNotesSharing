@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User # this is to import user database
 # Create your models here.
 
 class Signup(models.Model):

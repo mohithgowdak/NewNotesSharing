@@ -11,7 +11,8 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'NotesSharingProject.settings')
+settings_module='NotesSharingProject.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'NotesSharingProject.settings'
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
 application = get_wsgi_application()
 app = application
